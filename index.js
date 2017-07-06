@@ -12,7 +12,7 @@ app.use(cors());
 
 massive(connectionString).then(dbInstance => app.set('db', dbInstance) );
 
-app.get("/api/product", products_controller.getAll);
+app.get("/api/products", products_controller.getAll);
 app.get("/api/product/:id", products_controller.getOne);
 app.put("/api/product/:id", products_controller.update);
 app.post("/api/product", products_controller.create);
